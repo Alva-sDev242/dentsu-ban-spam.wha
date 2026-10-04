@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#050505">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>𝐃𝐀𝐑𝐊 𝐑𝐄𝐏𝐎𝐑𝐓 / 𝐒𝐏𝐀𝐌 𝐓𝐎𝐎𝐋 🩸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== FOND ANIMÉ (canvas étoiles) ===== -->
+<canvas id="stars"></canvas>
+
+<!-- ===== VIDÉO DE FOND ===== -->
+<div class="video-wrapper">
+    <video autoplay loop muted playsinline>
+        <source src="https://files.catbox.moe/d51tit.mp4" type="video/mp4">
+    </video>
+</div>
+
+<!-- ===== OVERLAY CHARGEMENT ===== -->
+<div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+</div>
+
+<!-- ===== OVERLAY MENU ===== -->
+<div id="menuOverlay" class="menu-overlay"></div>
+
+<!-- ===== ICÔNE MENU FLOTTANTE ===== -->
+<div class="menu-float" id="menuIcon">☰</div>
+
+<!-- ===== MENU LATÉRAL ===== -->
+<div id="sideMenu" class="side-menu">
+    <div class="menu-header">
+        <h3>𝕯𝖗𝖐 𝕾𝖐𝖞'𝖘 𝕯𝖊𝖓</h3>
+    </div>
+    <div class="menu-buttons">
+        <button class="menu-btn whatsapp" id="menuWhatsappBtn">💬 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥</button>
+        <button class="menu-btn telegram" id="menuTelegramBtn">✈️ 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐂𝐡𝐚𝐧𝐧𝐞𝐥</button>
+        <button class="menu-btn owner" id="menuOwnerBtn">👑 𝐎𝐰𝐧𝐞𝐫</button>
+    </div>
+    <div class="menu-footer">
+        <div class="uid-section">
+            <div class="uid-label">🌟 𝐔𝐧𝐢𝐪𝐮𝐞 𝐈𝐃</div>
+            <div class="uid-value" id="userUid">Chargement...</div>
+            <button class="copy-uid-btn" id="copyUidBtn">📋 𝐂𝐨𝐩𝐢𝐞𝐫 𝐥'𝐔𝐈𝐃</button>
+        </div>
+        <div class="close-menu-btn" id="closeMenuBtn">✖ 𝐅𝐞𝐫𝐦𝐞𝐫</div>
+    </div>
+</div>
+
+<!-- ===== CONTENU PRINCIPAL ===== -->
+<main class="main-content">
+
+    <header class="hero-header">
+        <h1>𝐃𝐀𝐑𝐊 𝐑𝐄𝐏𝐎𝐑𝐓'𝐒 𝐓𝐎𝐎𝐋</h1>
+        <p class="subtitle">𝐒𝐮𝐩𝐩𝐨𝐫𝐭 𝐑𝐞𝐩𝐨𝐫𝐭<br>𝐃𝐚𝐫𝐤 𝐒𝐲𝐬𝐭𝐞𝐦</p>
+    </header>
+
+    <div class="report-box">
+        <div class="phone-input" id="phoneWrapper">
+            <span>☎️</span>
+            <input type="tel" id="phone" placeholder="Enter phone number" inputmode="tel" autocomplete="off">
+        </div>
+        <div class="motifs">
+            <button data-type="ABUSE" class="motif-btn">ABUSE 🛡️</button>
+            <button data-type="SCAM" class="motif-btn">SCAM ⚠️</button>
+            <button data-type="SPAM" class="motif-btn">SPAM ❌</button>
+        </div>
+        <button id="sendBtn" class="envoyer-btn">𝐒𝐞𝐧𝐝</button>
+    </div>
+
+    <!-- ========== DISCLAIMER ========== -->
+    <div class="disclaimer">
+        ⚠️ 𝐍𝐨𝐭𝐢𝐜𝐞 : This tool is for educational purposes only.<br>
+        We do not guarantee the banning of any account and are not responsible<br>
+        for any consequences that may arise from using this service.<br>
+        Use at your own risk.
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
