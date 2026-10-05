@@ -54,7 +54,7 @@
 ![Version](https://img.shields.io/badge/VERSION-3.0.20.V-ff0000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Status](https://img.shields.io/badge/STATUS-ARMED-880000?style=for-the-badge&logo=statuspage&logoColor=white)
 ![Platform](https://img.shields.io/badge/PLATFORM-ANDROID-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Owner](https://img.shields.io/badge/OWNER-LORD__X__AZIZ-000000?style=for-the-badge&logo=telegram&logoColor=white)
+![Owner](https://img.shields.io/badge/OWNER-Natsu'stech-000000?style=for-the-badge&logo=telegram&logoColor=white)
 
 <br>
 
@@ -65,7 +65,7 @@
 <a href="https://t.me/xizlegion">
   <img src="https://img.shields.io/badge/Telegram-Channel-0088cc?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Channel"/>
 </a>
-<a href="https://t.me/LORD_X_AZIZ">
+<a href="https://t.me/Natsu_or_Dentsu">
   <img src="https://img.shields.io/badge/Owner-Contact-ff0000?style=for-the-badge&logo=telegram&logoColor=white" alt="Owner"/>
 </a>
 
@@ -101,7 +101,7 @@
 ## 🩸 À PROPOS
 
 **DARK REPORT'S TOOL** est une interface sombre et stylée qui permet d'envoyer
-des **rapports d'abus** vers les services WhatsApp et Meta.
+des **rapports d'abus** vers les services WhatsApp and Meta.
 
 > ⚠️ **AVERTISSEMENT :** Ce projet est fourni à des fins **éducatives uniquement**.
 > Nous ne garantissons pas le bannissement d'un compte et déclinons toute
@@ -168,12 +168,12 @@ des **rapports d'abus** vers les services WhatsApp et Meta.
     <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
   </text>
   <text x="300" y="65" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#666">
-    © 2024 — LORD X AZIZ — ALL RIGHTS RESERVED
+    © 2024 — DENTSU'SPROJECT — ALL RIGHTS RESERVED
   </text>
 </svg>
 
 <br>
 
-**💀 Stay in the shadows. 💀**
+**💀 Stay in the DARK WORLD. 💀**
 
 </div>
