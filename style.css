@@ -1,15 +1,7 @@
-/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-}
-
-html, body {
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -19,15 +11,10 @@ body {
     background: #050505;
     color: #eaeaea;
     min-height: 100vh;
-    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    padding-top: calc(20px + env(safe-area-inset-top));
-    padding-bottom: calc(20px + env(safe-area-inset-bottom));
-    padding-left: calc(20px + env(safe-area-inset-left));
-    padding-right: calc(20px + env(safe-area-inset-right));
     position: relative;
 }
 
@@ -38,18 +25,17 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none;
 }
 
-/* ========== BOUTON MENU FLOTTANT ========== */
+/* ========== BOUTON MENU FLOTTANT LÉGER ========== */
 .menu-float {
     position: fixed;
-    top: calc(20px + env(safe-area-inset-top));
+    top: 20px;
     left: 20px;
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,27 +43,25 @@ body {
     background: rgba(255, 0, 0, 0.15);
     border: 1px solid rgba(255, 0, 0, 0.4);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     transition: all 0.3s ease;
     z-index: 100;
     color: rgba(255, 80, 80, 0.8);
-    user-select: none;
 }
 
-.menu-float:active {
-    transform: scale(0.92);
-    background: rgba(255, 0, 0, 0.35);
+.menu-float:hover {
+    transform: scale(1.05);
+    background: rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.7);
     color: #ff4040;
 }
 
-/* ========== MENU LATÉRAL ========== */
+/* ========== MENU LATÉRAL GAUCHE ========== */
 .side-menu {
     position: fixed;
     top: 0;
     left: -300px;
     width: 280px;
     height: 100%;
-    height: 100dvh;
     background: linear-gradient(145deg, #0a0a0a, #050505);
     border-right: 2px solid #ff0000;
     box-shadow: 5px 0 30px rgba(255, 0, 0, 0.3);
@@ -86,9 +70,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    padding-top: calc(20px + env(safe-area-inset-top));
-    padding-bottom: calc(20px + env(safe-area-inset-bottom));
-    overflow-y: auto;
 }
 
 .side-menu.open {
@@ -116,8 +97,7 @@ body {
 }
 
 .menu-btn {
-    padding: 16px 14px;
-    min-height: 52px;
+    padding: 14px;
     border-radius: 12px;
     font-weight: bold;
     font-size: 1rem;
@@ -130,12 +110,23 @@ body {
     gap: 10px;
 }
 
-.menu-btn.whatsapp { background: #25D366; color: #000; }
-.menu-btn.telegram { background: #0088cc; color: #fff; }
-.menu-btn.owner    { background: #ff0000; color: #fff; }
+.menu-btn.whatsapp {
+    background: #25D366;
+    color: #000;
+}
 
-.menu-btn:active {
-    transform: scale(0.97);
+.menu-btn.telegram {
+    background: #0088cc;
+    color: #fff;
+}
+
+.menu-btn.owner {
+    background: #ff0000;
+    color: #fff;
+}
+
+.menu-btn:hover {
+    transform: translateX(5px);
     filter: brightness(1.1);
 }
 
@@ -174,43 +165,49 @@ body {
     background: #ff0000;
     border: none;
     color: white;
-    padding: 12px;
+    padding: 8px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     width: 100%;
     transition: 0.2s;
-    min-height: 44px;
 }
 
-.copy-uid-btn:active { background: #cc0000; }
+.copy-uid-btn:hover {
+    background: #cc0000;
+}
 
 .close-menu-btn {
     background: #222;
     color: white;
-    padding: 14px;
+    padding: 10px;
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-top: 10px;
     transition: 0.2s;
-    min-height: 44px;
 }
 
-.close-menu-btn:active { background: #333; }
+.close-menu-btn:hover {
+    background: #333;
+}
 
 .menu-overlay {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1999;
     display: none;
 }
 
-.menu-overlay.active { display: block; }
+.menu-overlay.active {
+    display: block;
+}
 
-/* ========== VIDÉO ========== */
 .video-wrapper {
     width: 100%;
     max-width: 520px;
@@ -226,16 +223,11 @@ body {
 
 .video-wrapper video {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-/* ========== HERO ========== */
-.hero-header {
-    text-align: center;
-    width: 100%;
 }
 
 h1 {
@@ -244,7 +236,6 @@ h1 {
     font-size: 2.1rem;
     margin-bottom: 8px;
     text-shadow: 0 0 20px #ff0000;
-    word-break: break-word;
 }
 
 .subtitle {
@@ -255,7 +246,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* ========== REPORT BOX ========== */
 .report-box {
     background: linear-gradient(145deg, #0a0a0a, #050505);
     padding: 25px;
@@ -285,10 +275,7 @@ h1 {
     font-size: 1.1rem;
     outline: none;
     font-family: monospace;
-    min-width: 0;
 }
-
-.phone-input input::placeholder { color: #666; }
 
 .phone-input span {
     font-size: 1.8rem;
@@ -296,7 +283,6 @@ h1 {
     color: #ff0000;
 }
 
-/* ========== MOTIFS ========== */
 .motifs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -306,13 +292,12 @@ h1 {
 
 .motif-btn {
     padding: 18px 10px;
-    min-height: 58px;
     border: 2px solid #ff0000;
     background: #0a0a0a;
     color: #ff4040;
     border-radius: 12px;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -324,16 +309,12 @@ h1 {
     transform: scale(1.05);
 }
 
-.motif-btn:active { transform: scale(0.96); }
-
-/* ========== BOUTON ENVOYER ========== */
 .envoyer-btn {
     display: block;
     width: 100%;
     background: linear-gradient(90deg, #800000, #ff0000);
     color: white;
     padding: 18px;
-    min-height: 60px;
     border: none;
     border-radius: 14px;
     font-size: 1.45rem;
@@ -344,20 +325,18 @@ h1 {
     transition: 0.3s;
 }
 
-.envoyer-btn:active {
-    transform: scale(0.97);
+.envoyer-btn:hover {
     box-shadow: 0 0 40px #ff0000;
+    transform: translateY(-3px);
 }
 
-/* ========== TOAST ========== */
 .toast {
     position: fixed;
-    bottom: calc(30px + env(safe-area-inset-bottom));
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     color: #1a1a1a;
     padding: 12px 24px;
     border-radius: 30px;
@@ -367,12 +346,17 @@ h1 {
     z-index: 1000;
     animation: slideUp 0.3s ease;
     white-space: nowrap;
-    max-width: 90vw;
 }
 
 @keyframes slideUp {
-    0%   { opacity: 0; transform: translateX(-50%) translateY(30px); }
-    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .toast.fade-out {
@@ -387,10 +371,12 @@ h1 {
     }
 }
 
-/* ========== LOADING ========== */
 .loading-overlay {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 999;
     display: none;
@@ -407,7 +393,11 @@ h1 {
     animation: spin 0.8s linear infinite;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
 
 /* ========== DISCLAIMER ========== */
 .disclaimer {
@@ -420,21 +410,14 @@ h1 {
     max-width: 480px;
     line-height: 1.5;
     letter-spacing: 0.3px;
-    margin-bottom: calc(20px + env(safe-area-inset-bottom));
 }
 
-.disclaimer br { display: none; }
+.disclaimer br {
+    display: none;
+}
 
 @media (max-width: 480px) {
-    .disclaimer br { display: inline; }
-}
-
-/* ========== MAIN CONTENT ========== */
-.main-content {
-    width: 100%;
-    max-width: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-}
+    .disclaimer br {
+        display: inline;
+    }
+    }
